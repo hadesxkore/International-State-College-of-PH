@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" href="Design.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <script src="https://kit.fontawesome.com/66fde66c9f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Responsive Image Cards With Hover Effect</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'poppins', sans-serif; 
+    }
+    .container{
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 100px;
+    }
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-gap:15px;
+    }
+    .gallery img{
+      width: 100%;
+      
+    }
+
+  </style>
+  </head>
+  <body>
+    <section class = "header">
+      <nav>
+          <a href= "ICSP.html"><img src="ID.jpg"></a>
+          <div class="nav-links" id="navLinks">
+              <i class="fa-solid fa-xmark" onclick= "hideMenu()"></i>
+              <ul>
+                  <li><a href="ICSP.html">HOME</a></li>
+                  <li><a href="School.html">SCHOOL</a></li>
+                  <li><a href="Course.html">COURSE</a></li>
+                  <li><a href="Register.html">REGISTER</a></li>
+                  <li><a href="Login.html">LOG IN</a></li>
+              </ul>
+          </div>
+          <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+</div>
+</section>
+<script>
+    var navLinks= document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right= "0";
+    }
+    function hideMenu(){
+        navLinks.style.right= "-200px";
+    }
+</script> 
+
+      <div class="container">
+        <div class="gallery">
+          <a href="pic1.jpg" data-lightbox="models" data-title="Exterior1">
+            <img src="pic1.jpg" alt="">
+          </a>
+          <a href="pic2.jpg" data-lightbox="models" data-title="Exterior2">
+            <img src="pic2.jpg" alt="">
+          </a>
+          <a href="pic3.jpg" data-lightbox="models" data-title="Exterior3">
+            <img src="pic3.jpg" alt="">
+          </a>
+          <a href="pic4.jpg" data-lightbox="models" data-title="Exterior4">
+            <img src="pic4.jpg" alt="">
+          </a>
+          <br>
+          <a href="pic5.jpg" data-lightbox="models" data-title="Exterior5">
+            <img src="pic5.jpg" alt="">
+          </a>
+          <a href="pic6.jpg" data-lightbox="models" data-title="Exterior6">
+            <img src="pic6.jpg" alt="">
+          </a>
+          <a href="pic7.jpg" data-lightbox="models" data-title="Exterior7">
+            <img src="pic7.jpg" alt="">
+          </a>
+          <a href="pic2.jpg" data-lightbox="models" data-title="Exterior8">
+            <img src="pic2.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <script src="lightbox-plus-jquery.js"></script>
+  </body>
+</html>
+      
